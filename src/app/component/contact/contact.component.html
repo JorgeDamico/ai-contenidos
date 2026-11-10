@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-12 vh-100 d-flex flex-column align-items-center justify-content-start pt-5 bg-light">
+            <p class="text text-secondary fs-1 pt-4">Contacto</p>
+            <p class="text text-dark fs-4 pt-4">Envianos un correo con tu consulta a:</p>
+            <p class="text text-secondary fs-5"><a href="mailto:ai.contenidos@gmail.com" class="text-decoration-none">
+                    <i class="bi bi-envelope"></i> ai.contenidos@gmail.com
+                </a></p>
+            <p class="text text-dark fs-4 pt-4">WhatsApp:</p>
+            <p class="text text-secondary fs-5"><i class="bi bi-phone"></i>+54 266 450 4258</p>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label text text-dark fs-4 pt-4">Tu mensaje:</label>
+                <input type="text" id="mensaje" class="form-control mt-2" [(ngModel)]="mensaje"
+                    placeholder="Escribí tu consulta...">
+            </div>
+
+            <button class="btn btn-success mt-2" (click)="abrirWhatsApp()"
+                [disabled]="!mensaje || mensaje.trim().length < 5">
+                Enviar WhatsApp
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+.post-content {
+  color: var(--bs-body-color);
+}
+
+.post-content p {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.post-content h3 {
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  color: var(--bs-secondary-color);
+  font-style: italic;
+  font-weight: 600;
+}
+
+.post-content ul,
+.post-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+

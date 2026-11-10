@@ -1,59 +1,135 @@
-# AiContenidos
+# AI Contenidos
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.5.
+Sitio web desarrollado con Angular 22 orientado a SEO técnico, marketing de contenidos y publicación de artículos optimizados para motores de búsqueda.
 
-## Development server
+## Características
 
-To start a local development server, run:
+- Angular 22 Standalone
+- SSR / SSG (Prerender)
+- Blog dinámico basado en JSON
+- SEO centralizado mediante SeoService
+- Meta Tags dinámicos
+- Open Graph
+- Twitter Cards
+- Schema.org Article
+- Canonical URLs
+- Sitemap XML
+- Robots.txt
+- Página 404 personalizada
+- Bootstrap 5
+- Bootstrap Icons
 
-```bash
-ng serve
+---
+
+## Estructura del proyecto
+
+```text
+src/
+├── app/
+│   ├── component/
+│   │   ├── home/
+│   │   ├── services/
+│   │   ├── contact/
+│   │   ├── blog/
+│   │   ├── post/
+│   │   └── not-found/
+│   │
+│   ├── services/
+│   │   ├── post.service.ts
+│   │   └── seo.service.ts
+│   │
+│   └── app.routes.ts
+│
+├── environments/
+│   ├── environment.ts
+│   └── environment.prod.ts
+│
+public/
+├── posts/
+│   ├── posts.json
+│   ├── que-es-seo.json
+│   └── contenido.json
+│
+├── robots.txt
+└── sitemap.xml
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## Blog dinámico
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Cada artículo se almacena como un archivo JSON.
 
-```bash
-ng generate component component-name
+Ejemplo:
+
+```json
+{
+  "slug": "que-es-seo",
+  "title": "¿Qué es el SEO?",
+  "description": "Descubre qué es el SEO y cómo atraer tráfico orgánico y clientes.",
+  "author": "MSL",
+  "image": "/images/que-es-seo.jpg",
+  "datePublished": "2026-11-09",
+  "dateModified": "2026-11-09",
+  "content": "<p>Contenido...</p>"
+}
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Ruta generada:
 
-```bash
-ng generate --help
+```text
+/blog/que-es-seo
 ```
 
-## Building
+---
 
-To build the project run:
+## SEO Implementado
 
-```bash
-ng build
+### Title
+
+```html
+<title>¿Qué es el SEO? | IA Contenidos</title>
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### Description
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
+```html
+<meta name="description">
 ```
 
-## Running end-to-end tests
+### Open Graph
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
+```html
+<meta property="og:title">
+<meta property="og:description">
+<meta property="og:image">
+<meta property="og:url">
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### Twitter Cards
 
-## Additional Resources
+```html
+<meta name="twitter:card">
+<meta name="twitter:title">
+<meta name="twitter:description">
+<meta name="twitter:image">
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Schema.org
+
+Tipo:
+
+```json
+Article
+```
+
+Incluye:
+
+- headline
+- description
+- author
+- publisher
+- image
+- datePublished
+- dateModified
+-

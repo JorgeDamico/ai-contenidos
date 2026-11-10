@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-md-2 bg-light pt-4">
+      <h5 class="text-center mb-4 pt-3">Contenidos</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2 mt-2">
+          <a class="btn btn-outline-primary w-100 text-start" routerLink="/blog/que-es-seo" routerLinkActive="active-menu">
+            <i class="bi bi-journal-text me-2"></i> ¿Qué es el SEO?
+          </a>
+        </li>
+        <li class="nav-item mb-2 mt-2">
+          <a class="btn btn-outline-secondary w-100 text-start" routerLink="/blog/contenido" routerLinkActive="active-menu">
+            <i class="bi bi-lightbulb me-2"></i> Contenido de calidad
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-12 col-md-10 d-flex justify-content-center align-items-start pt-4">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center align-items-center pt-4">
+
+      <div class="col-10 col-md-8 pt-3 mb-5">
+
+        <h1 class="text-body-secondary mb-4 fw-semibold">
+          {{ post?.title }}
+        </h1>
+
+        <h4 class="text-muted fst-italic mb-4">
+          {{ post?.description }}
+        </h4>
+
+        @if (post?.image) {
+        <img
+          [src]="post?.image || ''"
+          [alt]="post?.title || 'Imagen del artículo'"
+          class="img-fluid mb-4 rounded w-100"
+          [style.display]="post?.image ? 'block' : 'none'">
+        }
+
+        <div
+          class="post-content"
+          [innerHTML]="post?.content">
+        </div>
+
+        <p class="text-body-secondary fst-italic text-end mt-4">
+          {{ post?.author }}
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+</div>

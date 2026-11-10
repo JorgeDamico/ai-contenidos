@@ -1,0 +1,40 @@
+.text1 {
+    font-size: 52px !important;
+    font-weight: bold;
+    color: lightslategray;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.logo {
+    font-size: 92px;
+    color: rgb(83, 83, 83);
+    font-family: Cochin;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1;
+    display: block;
+}
+
+.logoD {
+    font-size: 30px;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1;
+    display: block;
+    font-family: Cochin;
+    color: rgb(95, 0, 0);
+}
+
+li , .text2 {
+    letter-spacing: 0.1em;
+}
+
+@media (max-width: 768px) {
+  .text1 {
+    font-size: 40px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: auto;
+  }
+}

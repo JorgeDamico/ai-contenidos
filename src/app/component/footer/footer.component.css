@@ -1,0 +1,23 @@
+.logo {
+    font-size: 46px;
+    color: rgb(83, 83, 83);
+    font-family: Cochin;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1;
+    display: block;
+}
+
+.logoD {
+    font-size: 15px;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1;
+    display: block;
+    font-family: Cochin;
+    color: rgb(95, 0, 0);
+}
+
+.bi-star {
+    font-size: 18px;
+}

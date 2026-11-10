@@ -1,0 +1,25 @@
+.logo {
+    font-size: 92px;
+    color: rgb(83, 83, 83);
+    font-family: Cochin;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1;
+    display: block;
+}
+
+.logoD {
+    font-size: 30px;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1;
+    display: block;
+    font-family: Cochin;
+    color: rgb(95, 0, 0);
+}
+
+@media (min-width: 576px) {
+  .row-full-height {
+    height: 100vh;
+  }
+}
