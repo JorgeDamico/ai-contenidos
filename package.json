@@ -8,8 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:ai-contenidos": "node dist/ai-contenidos/server/server.mjs",
-    "build:github": "ng build --configuration production --base-href=/ai-contenidos/ && echo. > ai-contenidos/browser/.nojekyll && copy ai-contenidos/browser/index.html ai-contenidos/browser/404.html",
-    "deploy": "npm run build:github",
+    "build:github": "echo \"🚀 Iniciando build...\" && ng build --configuration production --base-href=/ai-contenidos/",
+    "deploy": "npm run build:github && npx angular-cli-ghpages --dir=dist/ai-contenidos/browser",
     "build:prod": "ng build"
   },
   "private": true,
@@ -35,6 +35,7 @@
     "@angular/compiler-cli": "^22.2.0",
     "@types/express": "^5.0.1",
     "@types/node": "^22.12.0",
+    "angular-cli-ghpages": "^3.1.2",
     "jsdom": "^30.0.0",
     "prettier": "^3.8.1",
     "typescript": "~6.0.2",

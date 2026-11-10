@@ -13,11 +13,10 @@
         </h4>
 
         @if (post?.image) {
-        <img
-          [src]="post?.image || ''"
-          [alt]="post?.title || 'Imagen del artículo'"
-          class="img-fluid mb-4 rounded w-100"
-          [style.display]="post?.image ? 'block' : 'none'">
+          <img
+            [src]="post.image.startsWith('/') ? post.image.substring(1) : post.image"
+            [alt]="post.title"
+            class="img-fluid mb-4 rounded w-100 mx-auto d-block">
         }
 
         <div
