@@ -1,0 +1,14 @@
+[
+  {
+    "slug": "que-es-seo",
+    "title": "¿Qué es el SEO?",
+    "description": "Descubre qué es el SEO y cómo atraer tráfico orgánico y clientes.",
+    "image": "/images/que-es-seo.jpg"
+  },
+  {
+    "slug": "contenido",
+    "title": "Contenido de calidad",
+    "description": "El motor que impulsa el posicionamiento y la conversión.",
+    "image": "/images/contenido.jpg"
+  }
+]

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jorgedamico.github.io/ai-contenidos/sitemap.xml
