@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:ai-contenidos": "node dist/ai-contenidos/server/server.mjs",
-    "build:github": "echo \"🚀 Iniciando build para GitHub Pages...\" && ng build --configuration production --base-href=/ai-contenidos/ && echo \"✅ ¡Build completado con éxito!\" ",
+    "build:github": "ng build --configuration production --base-href=/ai-contenidos/ && echo. > ai-contenidos/browser/.nojekyll && copy ai-contenidos/browser/index.html ai-contenidos/browser/404.html",
+    "deploy": "npm run build:github",
     "build:prod": "ng build"
   },
   "private": true,
