@@ -131,7 +131,7 @@ export class SeoService {
       },
       publisher: {
         '@type': 'Organization',
-        name: 'IA Contenidos',
+        name: 'AI Contenidos',
         logo: {
           '@type': 'ImageObject',
           url: `${environment.siteUrl}/logo.png`

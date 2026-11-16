@@ -18,7 +18,7 @@ export class HomeComponent {
 
   ngOnInit() {
     this.seoService.updateSeo(
-      'IA Contenidos | SEO y Marketing Digital',
+      'AI Contenidos | SEO y Marketing Digital',
       'Servicios SEO y contenidos optimizados para Google.',
       'https://jorgedamico.github.io/ai-contenidos/'
     );

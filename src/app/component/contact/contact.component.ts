@@ -20,8 +20,8 @@ export class ContactComponent {
   ngOnInit(): void {
 
     this.seoService.updateSeo(
-      'Contacto | IA Contenidos',
-      'Contacta con IA Contenidos para mejorar el posicionamiento SEO y la visibilidad de tu sitio web.',
+      'Contacto | AI Contenidos',
+      'Contacta con AI Contenidos para mejorar el posicionamiento SEO y la visibilidad de tu sitio web.',
       'https://jorgedamico.github.io/ai-contenidos/contact'
     );
 

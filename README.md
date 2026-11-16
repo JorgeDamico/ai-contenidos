@@ -88,7 +88,7 @@ Ruta generada:
 ### Title
 
 ```html
-<title>¿Qué es el SEO? | IA Contenidos</title>
+<title>¿Qué es el SEO? | AI Contenidos</title>
 ```
 
 ### Description

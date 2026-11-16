@@ -18,7 +18,7 @@ export class NotFoundComponent {
   ngOnInit(): void {
 
     this.seoService.updateSeo(
-      '404 - Página no encontrada | IA Contenidos',
+      '404 - Página no encontrada | AI Contenidos',
       'La página que buscas no existe o ha sido movida.',
       'https://jorgedamico.github.io/ai-contenidos/404'
     );

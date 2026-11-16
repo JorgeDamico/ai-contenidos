@@ -40,10 +40,10 @@ export class PostComponent {
           this.post = data;
 
           this.cdr.detectChanges();
-          const postKeywords = data.keywords || 'ia contenidos, blog, tecnologia';
+          const postKeywords = data.keywords || 'AI Contenidos, blog, tecnologia';
 
           this.seoService.updateSeo(
-            `${data.title} | IA Contenidos`,
+            `${data.title} | AI Contenidos`,
             data.description,
             `${environment.siteUrl}/blog/${data.slug}`,
             `${environment.siteUrl}/images/${data.slug}.jpg`,

@@ -15,7 +15,7 @@ export class ServicesComponent {
   ngOnInit(): void {
 
     this.seoService.updateSeo(
-      'Servicios SEO | IA Contenidos',
+      'Servicios SEO | AI Contenidos',
       'Conoce nuestros servicios de SEO, optimización web y contenidos.',
       'https://jorgedamico.github.io/ai-contenidos/services'
     );
