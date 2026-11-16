@@ -16,7 +16,10 @@
           <img
             [src]="post.image.startsWith('/') ? post.image.substring(1) : post.image"
             [alt]="post.title"
-            class="img-fluid mb-4 rounded w-100 mx-auto d-block">
+            fetchpriority="high"
+            width="800"
+            height="450"
+            class="img-fluid mb-4 rounded  mx-auto d-block">
         }
 
         <div
