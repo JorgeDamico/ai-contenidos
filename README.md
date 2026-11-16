@@ -132,4 +132,20 @@ Incluye:
 - image
 - datePublished
 - dateModified
--
+
+  ##########################
+
+# 1. Guarda los cambios en tu rama main
+git add .
+git commit -m "fix: ajustar ruta de imágenes relativa para GitHub Pages"
+git push origin main
+
+# 2. Compila y actualiza la web de producción automáticamente
+npm run deploy
+
+
+
+
+
+
+dsdf
