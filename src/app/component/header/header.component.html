@@ -1,9 +1,31 @@
 <nav class="navbar navbar-expand-lg" style="background-color: #e7f1f3;">
     <div class="container-fluid d-flex align-items-center">
-        <div class="col d-flex flex-column justify-content-center align-items-center">
-          <p class="text logo">AI</p>
-          <p class="text logoD mt-0"><i class="bi bi-star"></i> Contenidos</p>
+
+        <a routerLink="/" class="text-decoration-none d-inline-flex align-items-center gap-2  ps-2">
+            <div class="px-2 py-1 rounded-2 fw-black fs-4 text-white"
+                style="background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%); letter-spacing: 1px;">
+                AI
+            </div>
+            <div class="d-flex flex-column justify-content-center lh-1">
+                <span class="fs-5  text-dark pb-1">Contenidos</span>
+                <span class="text-secondary small" style="font-size: 0.75rem;">Digital & SEO</span>
+            </div>
+        </a>
+
+        <!-- <a routerLink="/" class="text-decoration-none d-inline-flex align-items-center gap-2">
+        <div class="d-flex align-items-center justify-content-center bg-dark text-info rounded-circle" style="width: 38px; height: 38px;">
+            <i class="bi bi-graph-up-arrow fs-5"></i>
         </div>
+        <div class="d-flex flex-column lh-1">
+            <span class="fs-5 fw-bolder text-dark">
+            AI <span class="text-info fw-semibold">Contenidos</span>
+            </span>
+            <span class="text-muted text-uppercase mt-1" style="font-size: 0.65rem; letter-spacing: 2px;">
+            SEO & Estrategia
+            </span>
+        </div>
+        </a> -->
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -11,16 +33,20 @@
         <div class="collapse navbar-collapse ps-4" id="navbarNav">
             <ul class="navbar-nav justify-content-start w-100">
                 <li class="nav-item ps-4 pe-5">
-                    <a class="nav-link" routerLink="" routerLinkActive="active"  [routerLinkActiveOptions]="{ exact: true }"><i class="bi bi-house"></i> Inicio</a>
+                    <a class="nav-link" routerLink="" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }"><i class="bi bi-house"></i> Inicio</a>
                 </li>
                 <li class="nav-item ps-4 pe-5">
-                    <a class="nav-link" routerLink="services" routerLinkActive="active"><i class="bi bi-gear"></i> Servicios</a>
+                    <a class="nav-link" routerLink="services" routerLinkActive="active"><i class="bi bi-gear"></i>
+                        Servicios</a>
                 </li>
                 <li class="nav-item ps-4 pe-5">
-                    <a class="nav-link" routerLink="blog" routerLinkActive="active"><i class="bi bi-pencil"></i> Blog</a>
+                    <a class="nav-link" routerLink="blog" routerLinkActive="active"><i class="bi bi-pencil"></i>
+                        Blog</a>
                 </li>
                 <li class="nav-item ps-4 pe-5">
-                    <a class="nav-link" routerLink="contact" routerLinkActive="active"><i class="bi bi-envelope"></i> Contacto</a>
+                    <a class="nav-link" routerLink="contact" routerLinkActive="active"><i class="bi bi-envelope"></i>
+                        Contacto</a>
                 </li>
             </ul>
         </div>

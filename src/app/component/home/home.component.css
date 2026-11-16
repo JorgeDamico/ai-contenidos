@@ -6,6 +6,13 @@
     line-height: 1.2;
 }
 
+.frase {
+    background-image: url("/images/fondo-tech.webp") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
 .logo {
     font-size: 92px;
     color: rgb(83, 83, 83);
