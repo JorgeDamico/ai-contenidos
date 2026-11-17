@@ -34,6 +34,8 @@ export class SeoService {
     image?: string,
     keywords?: string
   ): void {
+    // 1. Normalizamos la URL para asegurar que termine con '/' y evite redirecciones 301 en GitHub Pages
+    const normalizedUrl = this.normalizeUrl(url);
 
     this.title.setTitle(title);
 
@@ -59,11 +61,10 @@ export class SeoService {
 
     this.meta.updateTag({
       property: 'og:url',
-      content: url
+      content: normalizedUrl
     });
 
     if (image) {
-
       this.meta.updateTag({
         property: 'og:image',
         content: image
@@ -73,7 +74,6 @@ export class SeoService {
         name: 'twitter:image',
         content: image
       });
-
     }
 
     this.meta.updateTag({
@@ -102,8 +102,13 @@ export class SeoService {
       this.meta.removeTag("name='keywords'");
     }
 
-    this.updateCanonical(url);
+    this.updateCanonical(normalizedUrl);
+  }
 
+  // Nuevo método auxiliar para asegurar la barra final '/'
+  private normalizeUrl(url: string): string {
+    if (!url) return 'https://github.io';
+    return url.endsWith('/') ? url : `${url}/`;
   }
 
   private updateCanonical(url: string): void {
@@ -115,6 +120,7 @@ export class SeoService {
       link.setAttribute('href', url);
     }
   }
+
 
 
   updateArticleSchema(post: any, url: string, keywords?: string): void {
@@ -148,7 +154,7 @@ export class SeoService {
     };
 
     if (keywords) {
-      schema.keywords = keywords; 
+      schema.keywords = keywords;
     }
 
     let script = this.document.getElementById(
