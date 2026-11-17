@@ -1,11 +1,23 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, UrlSerializer, DefaultUrlSerializer, UrlTree } from '@angular/router';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
+
+export class TrailingSlashUrlSerializer extends DefaultUrlSerializer {
+  override serialize(tree: UrlTree): string {
+    const path = super.serialize(tree);
+    if (path === '/' || path.includes('?') || path.includes('#')) {
+      return path;
+    }
+    return path.endsWith('/') ? path : `${path}/`;
+  }
+}
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes), provideClientHydration()
+    provideRouter(routes),
+    provideClientHydration(),
+    { provide: UrlSerializer, useClass: TrailingSlashUrlSerializer }
   ]
 };
