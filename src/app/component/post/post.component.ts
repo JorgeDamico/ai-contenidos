@@ -42,17 +42,19 @@ export class PostComponent {
           this.cdr.detectChanges();
           const postKeywords = data.keywords || 'AI Contenidos, blog, tecnologia';
 
+          const postUrl = `${environment.siteUrl}/blog/${data.slug}/`;
+
           this.seoService.updateSeo(
             `${data.title} | AI Contenidos`,
             data.description,
-            `${environment.siteUrl}/blog/${data.slug}`,
+            postUrl,                                   
             `${environment.siteUrl}/images/${data.slug}.webp`,
             postKeywords
           );
           
           this.seoService.updateArticleSchema(
             data,
-            `${environment.siteUrl}/blog/${data.slug}`
+            postUrl                                        
           );
 
         });

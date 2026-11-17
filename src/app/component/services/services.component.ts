@@ -17,7 +17,7 @@ export class ServicesComponent {
     this.seoService.updateSeo(
       'Servicios de Redacción SEO y Posicionamiento | AI Contenidos',
       'Conoce nuestros servicios de SEO, optimización web y contenidos.',
-      'https://jorgedamico.github.io/ai-contenidos/services'
+      'https://jorgedamico.github.io/ai-contenidos/services/'
     );
 
   }

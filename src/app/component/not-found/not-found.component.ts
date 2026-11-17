@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SeoService } from '../../services/seo.service';
 import { RouterLink } from '@angular/router';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-not-found',
@@ -12,7 +13,8 @@ import { RouterLink } from '@angular/router';
 export class NotFoundComponent {
 
   constructor(
-    private seoService: SeoService
+    private seoService: SeoService,
+    private meta: Meta
   ) {}
 
   ngOnInit(): void {
@@ -20,9 +22,9 @@ export class NotFoundComponent {
     this.seoService.updateSeo(
       '404 - Página no encontrada | AI Contenidos',
       'La página que buscas no existe o ha sido movida.',
-      'https://jorgedamico.github.io/ai-contenidos/404'
+      'https://jorgedamico.github.io/ai-contenidos/404/'
     );
-
+    this.meta.updateTag({ name: 'robots', content: 'noindex, nofollow' });
   }
 
 }

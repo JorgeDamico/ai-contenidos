@@ -22,7 +22,7 @@ export class ContactComponent {
     this.seoService.updateSeo(
       'Contacto y Presupuesto de Contenidos SEO | AI Contenidos',
       'Contacta con AI Contenidos para mejorar el posicionamiento SEO y la visibilidad de tu sitio web.',
-      'https://jorgedamico.github.io/ai-contenidos/contact'
+      'https://jorgedamico.github.io/ai-contenidos/contact/'
     );
 
   }
