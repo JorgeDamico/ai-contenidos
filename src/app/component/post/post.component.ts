@@ -46,7 +46,7 @@ export class PostComponent {
             `${data.title} | AI Contenidos`,
             data.description,
             `${environment.siteUrl}/blog/${data.slug}`,
-            `${environment.siteUrl}/images/${data.slug}.jpg`,
+            `${environment.siteUrl}/images/${data.slug}.webp`,
             postKeywords
           );
           

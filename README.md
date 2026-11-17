@@ -68,7 +68,7 @@ Ejemplo:
   "title": "¿Qué es el SEO?",
   "description": "Descubre qué es el SEO y cómo atraer tráfico orgánico y clientes.",
   "author": "MSL",
-  "image": "/images/que-es-seo.jpg",
+  "image": "/images/que-es-seo.webp",
   "datePublished": "2026-11-09",
   "dateModified": "2026-11-09",
   "content": "<p>Contenido...</p>"
