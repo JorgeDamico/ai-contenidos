@@ -1,6 +1,7 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-12 col-md-6 d-flex flex-column justify-content-start align-items-start min-vh-100" style="background-image: url('images/fondo-tech.webp'); background-size: cover; background-position: center;">
+    <div class="col-12 col-md-6 d-flex flex-column justify-content-start align-items-start min-vh-100"
+      style="background-image: url('images/fondo-tech.webp'); background-size: cover; background-position: center;">
       <div class="col-12 col-md-6" style="height: 80px;"></div>
       <h1 class="text1 ps-5 pt-5">Redacción SEO<br>de contenido<br>para <span class="text text-info">su proyecto</span>
       </h1>
@@ -8,8 +9,22 @@
         para el
         crecimiento y
         mantenimiento en el tiempo de su proyecto.</p>
-      <button type="button" class="btn btn-lg btn-md-sm btn-outline-primary ms-5 mt-5"
-        routerLink="/contact/">Contacto</button>
+      <a routerLink="/contact/" class="d-flex align-self-center align-items-center justify-content-between p-3 bg-white border rounded-3 
+              text-decoration-none shadow-sm mt-5 mb-5 w-75 btn-contact">
+        <div class="d-flex align-items-center gap-3">
+          <div class="d-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary rounded-2"
+            style="width: 42px; height: 42px;">
+            <i class="bi bi-telephone fs-5"></i>
+          </div>
+          <div>
+            <span class="d-block fw-semibold text-primary fs-5">Contacto</span>
+            <span class="d-block small text-muted text-secondary">Comenzá ahora a mejorar tu presencia en línea</span>
+          </div>
+        </div>
+        <i class="bi bi-chevron-right text-secondary"></i>
+      </a>
+      <!-- <button type="button" class="btn btn-lg btn-md-sm btn-outline-primary align-self-center mt-5"
+        routerLink="/contact/">Contacto</button> -->
     </div>
     <div class="col-12 col-md-6" style="background-color: #f8f9fa; ">
       <div class="row">
@@ -35,20 +50,76 @@
                 tráfico orgánico de alta calidad las 24 horas del día.
               </p>
 
-              <div class="d-flex flex-wrap gap-3 mt-4">
-                <a routerLink="/blog/que-es-seo/" class="fs-6 px-4" style="letter-spacing: 1px; text-decoration: none;">
-                  <i class="bi bi-file-earmark-text" style="color: gray;"></i> Leer guía: ¿Qué es el SEO?
+              <!-- <div class="d-flex flex-column gap-3 mt-4">
+                <a routerLink="/blog/que-es-seo/"
+                  class="d-flex align-items-center justify-content-between p-3 bg-white border rounded-3 text-decoration-none shadow-sm">
+                  <div class="d-flex align-items-center gap-3">
+                    <div
+                      class="d-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary rounded-2"
+                      style="width: 42px; height: 42px;">
+                      <i class="bi bi-journal-text fs-5"></i>
+                    </div>
+                    <div>
+                      <span class="d-block fw-semibold text-dark">¿Qué es el SEO?</span>
+                      <span class="d-block small text-muted">Guía práctica para atraer tráfico orgánico</span>
+                    </div>
+                  </div>
+                  <i class="bi bi-chevron-right text-secondary"></i>
+                </a>
+                <a routerLink="/blog/contenido/"
+                  class="d-flex align-items-center justify-content-between p-3 bg-white border rounded-3 text-decoration-none shadow-sm">
+                  <div class="d-flex align-items-center gap-3">
+                    <div
+                      class="d-flex align-items-center justify-content-center bg-info bg-opacity-10 text-info rounded-2"
+                      style="width: 42px; height: 42px;">
+                      <i class="bi bi-stars fs-5"></i>
+                    </div>
+                    <div>
+                      <span class="d-block fw-semibold text-dark">Importancia del contenido</span>
+                      <span class="d-block small text-muted">Cómo convertir lectores en clientes reales</span>
+                    </div>
+                  </div>
+                  <i class="bi bi-chevron-right text-secondary"></i>
                 </a>
 
-                <a routerLink="/blog/contenido/" class="fs-6 px-4" style="letter-spacing: 1px; text-decoration: none;">
-                  <i class="bi bi-file-earmark-text" style="color: gray;"></i> Importancia del contenido
-                </a>
+              </div> -->
+              <div class="row g-3 mt-3">
+
+                <div class="col-12 col-sm-6 card-post">
+                  <a routerLink="/blog/que-es-seo/"
+                    class="d-flex flex-column justify-content-between p-3 bg-white border rounded-3 text-decoration-none shadow-sm h-100">
+                    <div>
+                      <span class="badge bg-primary bg-opacity-10 text-primary mb-2">Guía SEO</span>
+                      <h3 class="h6 fw-bold text-dark mb-1">¿Qué es el SEO?</h3>
+                      <p class="small text-muted mb-3">Aprende cómo posicionarte en Google sin pagar anuncios.</p>
+                    </div>
+                    <span class="small fw-semibold text-primary">
+                      Leer artículo <i class="bi bi-arrow-right ms-1"></i>
+                    </span>
+                  </a>
+                </div>
+
+                <div class="col-12 col-sm-6 card-post">
+                  <a routerLink="/blog/contenido/"
+                    class="d-flex flex-column justify-content-between p-3 bg-white border rounded-3 text-decoration-none shadow-sm h-100">
+                    <div>
+                      <span class="badge bg-info bg-opacity-10 text-info mb-2">Estrategia</span>
+                      <h3 class="h6 fw-bold text-dark mb-1">Contenido de calidad</h3>
+                      <p class="small text-muted mb-3">Claves para escribir textos que fidelizan y venden.</p>
+                    </div>
+                    <span class="small fw-semibold text-info">
+                      Leer artículo <i class="bi bi-arrow-right ms-1"></i>
+                    </span>
+                  </a>
+                </div>
+
               </div>
+
 
             </div>
           </div>
         </section>
-        <!-- Agregar algo mas aca -->
+
       </div>
     </div>
     <div class="col-12 py-5 px-5 bg-white border-top">
@@ -63,8 +134,14 @@
           </p>
         </div>
         <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0">
-          <a routerLink="/services/" class="btn btn-outline-secondary px-4 py-2">
-            Conocer nuestros servicios <i class="bi bi-arrow-right ms-1"></i>
+          <a routerLink="/services/" class="d-flex align-self-center align-items-center justify-content-between p-3 bg-white border rounded-3 
+              text-decoration-none shadow-sm mt-5 mb-5 w-75 btn-services">
+            <div class="d-flex align-items-center gap-3">
+              <div>
+                <span class="d-block  text-secondary fs-5">Conocer nuestros servicios</span>
+              </div>
+            </div>
+            <i class="bi bi-chevron-right text-secondary"></i>
           </a>
         </div>
       </div>
