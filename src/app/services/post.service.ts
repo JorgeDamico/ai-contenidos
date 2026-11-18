@@ -12,4 +12,9 @@ export class PostService {
   getPost(slug: string): Observable<Post> {
     return this.http.get<Post>(`posts/${slug}.json`);
   } 
+
+  getAllPosts(): Observable<Post[]> {
+    return this.http.get<Post[]>('posts/posts.json');
+  }
+
 }

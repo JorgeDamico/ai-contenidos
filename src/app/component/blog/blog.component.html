@@ -2,18 +2,21 @@
   <div class="row">
     <div class="col-12 col-md-2 bg-light pt-4">
       <p class="text-center fs-4 mb-4 pt-3">Contenidos</p>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2 mt-2">
-          <a class="btn btn-outline-primary w-100 text-start" routerLink="/blog/que-es-seo/" routerLinkActive="active-menu">
-            <i class="bi bi-journal-text me-2"></i> ¿Qué es el SEO?
-          </a>
-        </li>
-        <li class="nav-item mb-2 mt-2">
-          <a class="btn btn-outline-secondary w-100 text-start" routerLink="/blog/contenido/" routerLinkActive="active-menu">
-            <i class="bi bi-lightbulb me-2"></i> Contenido de calidad
-          </a>
-        </li>
-      </ul>
+      @for (post of postHead; track post.slug) {
+        <a [routerLink]="['/blog/', post.slug]" 
+          class="d-flex align-items-center justify-content-between p-3 bg-white border rounded-3 text-decoration-none shadow-sm p-2 mb-3">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary rounded-2" style="width: 42px; height: 42px;">
+              <i class="bi bi-journal-text fs-5"></i>
+            </div>
+            <div>
+              <span class="d-block fw-semibold text-dark">{{ post.title }}</span>
+              <span class="d-block small text-muted">{{ post.description }}</span>
+            </div>
+          </div>
+          <i class="bi bi-chevron-right text-secondary"></i>
+        </a>
+      }
     </div>
 
     <div class="col-12 col-md-10 d-flex justify-content-center align-items-start pt-4">
