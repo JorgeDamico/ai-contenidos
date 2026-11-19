@@ -1,7 +1,8 @@
 .text1 {
     font-size: 52px !important;
     font-weight: bold;
-    color: lightslategray;
+    color: black;
+    /* color: lightslategray; */
     letter-spacing: 2px;
     line-height: 1.2;
 }

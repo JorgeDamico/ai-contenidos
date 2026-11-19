@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { SeoService } from '../../services/seo.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-services',
   templateUrl: './services.component.html',
-  styleUrls: ['./services.component.css']
+  styleUrls: ['./services.component.css'],
+  standalone: true,
+  imports: [RouterLink],
 })
 export class ServicesComponent {
 

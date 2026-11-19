@@ -3,13 +3,13 @@
 
         <a routerLink="/" (click)="cerrarMenu()"
             class="text-decoration-none d-inline-flex align-items-center gap-2 ps-2">
-            <div class="px-2 py-1 rounded-2 fw-black fs-4 text-white"
+            <div class="px-2 py-1 rounded-2 fw-black fs-3 text-white"
                 style="background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%); letter-spacing: 1px;">
                 AI
             </div>
             <div class="d-flex flex-column justify-content-center lh-1">
-                <span class="fs-5 text-dark pb-1">Contenidos</span>
-                <span class="text-primary small" style="font-size: 0.75rem;">Digital & SEO</span>
+                <span class="fs-4 text-dark fw-bold pb-1">Contenidos</span>
+                <span class="text-primary small fw-bold" style="font-size: 0.85rem;">Digital & SEO</span>
             </div>
         </a>
 
@@ -19,7 +19,7 @@
         </button>
 
         <div class="collapse navbar-collapse ps-lg-4 " [class.show]="menuAbierto" id="navbarNav">
-            <ul class="navbar-nav w-100">
+            <ul class="navbar-nav w-100 align-items-center">
                 <li class="nav-item ps-4 pe-5">
                     <a class="nav-link" routerLink="/" routerLinkActive="active"
                         [routerLinkActiveOptions]="{ exact: true }" (click)="cerrarMenu()">

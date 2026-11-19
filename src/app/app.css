@@ -1,0 +1,7 @@
+.whatsapp-float {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
