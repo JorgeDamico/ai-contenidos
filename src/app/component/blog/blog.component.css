@@ -11,3 +11,9 @@ p {
 .active-menu i {
   color: white;
 }
+
+.post-link:hover {
+  background-color: #e9ecef !important;
+  color: #0d6efd !important;
+  border-color: #0d6efd !important;
+}

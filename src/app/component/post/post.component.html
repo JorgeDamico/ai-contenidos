@@ -1,38 +1,80 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-12 d-flex justify-content-center align-items-center pt-4">
+<article class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8">
 
-      <div class="col-10 col-md-8 pt-3 mb-5">
+      @if (post) {
+        <!-- Cabecera del Artículo -->
+        <header class="mb-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary px-3 py-2 fw-semibold">
+              {{ post.category || 'Blog' }}
+            </span>
+            @if (post.datePublished) {
+              <span class="text-muted small">
+                <i class="bi bi-calendar3 me-1"></i> {{ post.datePublished }}
+              </span>
+            }
+          </div>
 
-        <h1 class="text-body-secondary mb-4 fw-semibold">
-          {{ post?.title }}
-        </h1>
+          <h1 class="display-5 fw-bold text-dark mb-3 lh-sm">
+            {{ post.title }}
+          </h1>
 
-        <h2 class="text-muted fs-4 fst-italic mb-4">
-          {{ post?.description }}
-        </h2>
+          <p class="lead text-secondary mb-4">
+            {{ post.description }}
+          </p>
 
-        @if (post?.image) {
-          <img
-            [src]="post.image.startsWith('/') ? post.image.substring(1) : post.image"
-            [alt]="post.title"
-            fetchpriority="high"
-            width="800"
-            height="450"
-            class="img-fluid mb-4 rounded  mx-auto d-block">
+          <!-- Barra de Autor -->
+          <div class="d-flex align-items-center gap-3 py-3 border-top border-bottom">
+            <div class="d-flex align-items-center justify-content-center rounded-circle text-white fw-bold shadow-sm"
+                 style="width: 44px; height: 44px; background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);">
+              AI
+            </div>
+            <div>
+              <span class="d-block fw-semibold text-dark lh-1 mb-1">
+                {{ post.author || 'Equipo AI Contenidos' }}
+              </span>
+              <span class="d-block small text-muted">
+                Especialistas en Redacción SEO y Posicionamiento
+              </span>
+            </div>
+          </div>
+        </header>
+
+        <!-- Imagen Destacada -->
+        @if (post.image) {
+          <figure class="my-4">
+            <img
+              [src]="post.image.startsWith('/') ? post.image.substring(1) : post.image"
+              [alt]="post.title"
+              fetchpriority="high"
+              width="800"
+              height="450"
+              class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover">
+          </figure>
         }
 
-        <div
-          class="post-content"
-          [innerHTML]="post?.content">
+        <!-- Cuerpo del Artículo -->
+        <div class="post-content my-5 text-dark" [innerHTML]="post.content"></div>
+
+        <!-- Tarjeta de Cierre / Llamado a la acción -->
+        <div class="p-4 p-md-5 rounded-4 border mt-5" style="background-color: #f8fbfc;">
+          <div class="row align-items-center g-3">
+            <div class="col-12 col-md-8">
+              <h2 class="h4 fw-bold text-dark mb-2">¿Quieres aplicar estas estrategias en tu web?</h2>
+              <p class="text-secondary mb-0">
+                Creamos contenido optimizado que posiciona tu proyecto en Google y convierte visitas en clientes.
+              </p>
+            </div>
+            <div class="col-12 col-md-4 text-md-center">
+              <a routerLink="/contact/" class="btn btn-outline-primary px-4 py-2 fw-semibold">
+                Solicitar asesoría <i class="bi bi-chevron-right text-info"></i>
+              </a>
+            </div>
+          </div>
         </div>
-
-        <p class="text-body-secondary fst-italic text-end mt-4">
-          {{ post?.author }}
-        </p>
-
-      </div>
+      }
 
     </div>
   </div>
-</div>
+</article>

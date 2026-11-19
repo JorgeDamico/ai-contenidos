@@ -1,23 +1,102 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12 col-md-12 min-vh-100 d-flex flex-column align-items-center justify-content-start pt-5 bg-light">
-            <h1 class="text text-secondary fs-1 pt-4">Contacto</h1>
-            <h2 class="text text-dark fs-4 pt-4">Envianos un correo con tu consulta a:</h2>
-            <p class="text text-secondary fs-5"><a href="mailto:ai.contenidos@gmail.com" class="text-decoration-none">
-                    <i class="bi bi-envelope"></i> ai.contenidos@gmail.com
-                </a></p>
-            <p class="text text-dark fs-4 pt-4">WhatsApp:</p>
-            <p class="text text-secondary fs-5"><i class="bi bi-phone"></i>+54 266 450 4258</p>
-            <div class="mb-3">
-                <label for="mensaje" class="form-label text text-dark fs-4 pt-4">Tu mensaje:</label>
-                <input type="text" id="mensaje" class="form-control mt-2" [(ngModel)]="mensaje"
-                    placeholder="Escribí tu consulta...">
+<div class="container-fluid py-5 min-vh-100 d-flex align-items-center" style="background-color: #fbfeff;">
+  <div class="container">
+    
+    <!-- Cabecera Moderna -->
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-12 col-md-8">
+        <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary px-3 py-2 mb-3 fw-semibold" style="letter-spacing: 1px;">
+          HABLEMOS DE TU PROYECTO
+        </span>
+        <h1 class="display-5 fw-bold text-dark mb-3">
+          Ponete en <span class="text-info">Contacto</span>
+        </h1>
+        <p class="lead text-secondary mb-0">
+          ¿Listo para posicionar tu web en Google? Escribinos directamente y te responderemos a la brevedad.
+        </p>
+      </div>
+    </div>
+
+    <!-- Tarjeta Principal de Contacto -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+          <div class="row g-0">
+            
+            <!-- Columna Izquierda: Canales Directos -->
+            <div class="col-12 col-md-5 p-4 p-md-5 d-flex flex-column justify-content-between" style="background-color: #e7f1f3;">
+              <div>
+                <h2 class="h4 fw-bold text-dark mb-3">Canales directos</h2>
+                <p class="text-secondary small mb-4">
+                  Elige el medio que te resulte más cómodo para enviarnos tu consulta o pedir un presupuesto sin compromiso.
+                </p>
+
+                <div class="d-flex flex-column gap-4 mt-4">
+                  <!-- Correo -->
+                  <div class="d-flex align-items-start gap-3">
+                    <div class="d-flex align-items-center justify-content-center bg-white text-primary rounded-3 shadow-sm flex-shrink-0" style="width: 42px; height: 42px;">
+                      <i class="bi bi-envelope fs-5"></i>
+                    </div>
+                    <div>
+                      <span class="d-block small text-muted fw-semibold">Correo electrónico</span>
+                      <a href="mailto:ai.contenidos@gmail.com" class="text-decoration-none text-dark fw-medium">
+                        ai.contenidos@gmail.com
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- WhatsApp -->
+                  <div class="d-flex align-items-start gap-3">
+                    <div class="d-flex align-items-center justify-content-center bg-white text-success rounded-3 shadow-sm flex-shrink-0" style="width: 42px; height: 42px;">
+                      <i class="bi bi-whatsapp fs-5"></i>
+                    </div>
+                    <div>
+                      <span class="d-block small text-muted fw-semibold">WhatsApp directo</span>
+                      <span class="text-dark fw-medium">+54 266 402 5478</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-5 pt-4 border-top border-secondary-subtle">
+                <span class="small text-muted">
+                  <i class="bi bi-clock me-1"></i> Tiempo habitual de respuesta: menos de 24 hs.
+                </span>
+              </div>
             </div>
 
-            <button class="btn btn-success mt-2" (click)="abrirWhatsApp()"
+            <!-- Columna Derecha: Mensaje Rápido a WhatsApp -->
+            <div class="col-12 col-md-7 p-4 p-md-5 bg-white">
+              <h2 class="h4 fw-bold text-dark mb-2">Envíanos un mensaje rápido</h2>
+              <p class="text-muted small mb-4">
+                Redacta tu idea o necesidad y se abrirá automáticamente el chat en WhatsApp con tu consulta lista.
+              </p>
+
+              <div class="mb-4">
+                <label for="mensaje" class="form-label fw-semibold text-dark">Tu consulta:</label>
+                <textarea 
+                  id="mensaje" 
+                  rows="4" 
+                  class="form-control bg-light border-0 p-3" 
+                  [(ngModel)]="mensaje"
+                  placeholder="Hola, me gustaría recibir información sobre redacción SEO para mi página web..."></textarea>
+                <div class="form-text text-end small">
+                  Mínimo 5 caracteres para habilitar el envío.
+                </div>
+              </div>
+
+              <button 
+                type="button"
+                class="btn btn-success btn-lg w-100 d-flex align-items-center justify-content-center gap-2 fw-semibold shadow-sm" 
+                (click)="abrirWhatsApp()"
                 [disabled]="!mensaje || mensaje.trim().length < 5">
-                Enviar WhatsApp
-            </button>
+                <i class="bi bi-whatsapp fs-5"></i> Enviar consulta por WhatsApp
+              </button>
+            </div>
+
+          </div>
         </div>
+      </div>
     </div>
+
+  </div>
 </div>

@@ -9,4 +9,6 @@ export interface Post {
   content: string;
   keywords?: string;
   image: string;
+  datePublished: string;
+  category: string;
 }

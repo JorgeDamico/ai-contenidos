@@ -1,5 +1,5 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { PostService } from '../../services/post.service';
 import { SeoService } from '../../services/seo.service';
 import { environment } from '../../../environments/environment';
@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css'],
-  imports: [CommonModule]
+  imports: [CommonModule, RouterLink],
 })
 export class PostComponent {
 
