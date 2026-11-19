@@ -1,5 +1,5 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideRouter, UrlSerializer, DefaultUrlSerializer, UrlTree } from '@angular/router';
+import { provideRouter, UrlSerializer, DefaultUrlSerializer, UrlTree, withInMemoryScrolling } from '@angular/router';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 
@@ -16,7 +16,11 @@ export class TrailingSlashUrlSerializer extends DefaultUrlSerializer {
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes),
+    provideRouter(routes,
+      withInMemoryScrolling({
+        scrollPositionRestoration: 'top',
+        anchorScrolling: 'enabled'
+      })),
     provideClientHydration(),
     { provide: UrlSerializer, useClass: TrailingSlashUrlSerializer }
   ]
