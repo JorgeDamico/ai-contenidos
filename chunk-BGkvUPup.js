@@ -1,1 +1,0 @@
-import{R as ZS,U as b,ft as x}from"./main-ETKDMSWF.js";var i=class t{constructor(o){this.http=o}http;getPost(o){return this.http.get(`posts/${o}.json`)}getAllPosts(){return this.http.get(`posts/posts.json`)}static ɵfac=function(n){return new(n||t)(b(ZS))};static ɵprov=x({token:t,factory:t.ɵfac,providedIn:`root`})};export{i as t};
