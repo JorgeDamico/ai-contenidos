@@ -1,0 +1,1 @@
+import{F as b,_ as N,ft as t_}from"./main-PWSKSEJU.js";var i=class t{constructor(o){this.http=o}http;getPost(o){return this.http.get(`posts/${o}.json`)}getAllPosts(){return this.http.get(`posts/posts.json`)}static ɵfac=function(n){return new(n||t)(b(t_))};static ɵprov=N({token:t,factory:t.ɵfac,providedIn:`root`})};export{i as t};
