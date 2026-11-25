@@ -1,0 +1,12 @@
+{
+  "slug": "guia-auditoria-contenidos",
+  "title": "Pasos clave para auditar el contenido de tu web",
+  "description": "Aprende a evaluar el rendimiento de tus páginas, detectar caídas de tráfico y crear un plan de mejora SEO paso a paso.",
+  "author": "MSL",
+  "image": "/images/guia-auditoria-contenidos.webp",
+  "datePublished": "24-11-2026",
+  "dateModified": "24-11-2026",
+  "keywords": "auditoría de contenido, seo on-page, caída de tráfico, canibalización seo, optimización web",
+  "category": "Guía & Estrategia SEO",
+  "content": "<p>Con el paso del tiempo, muchos sitios web acumulan páginas desactualizadas o artículos que dejaron de atraer visitas. Realizar una auditoría de contenido periódica te permite diagnosticar qué está funcionando, qué frena tu posicionamiento en Google y dónde están las mejores oportunidades para recuperar y multiplicar el tráfico orgánico.</p><h3>Inventario completo de URLs y rendimiento</h3><p>El punto de partida consiste en recopilar todas las páginas publicadas en tu sitio y analizar sus métricas principales, como impresiones, clics, tiempo de permanencia y conversiones. Esta radiografía completa permite distinguir qué contenidos aportan valor real al negocio y cuáles pasan desapercibidos para los usuarios y los buscadores.</p><h3>Detección de caídas de tráfico y canibalización</h3><p>Al revisar los datos históricos, es posible identificar páginas que perdieron posiciones frente a competidores más recientes o detectar casos de canibalización, donde dos o más URLs propias compiten por la misma palabra clave. Resolver estos conflictos evita que Google divida la autoridad entre varias páginas y mejora el ranking general.</p><h3>Plan de acción priorizado por impacto</h3><p>Una buena auditoría no termina en el diagnóstico, sino en decisiones concretas: actualizar información antigua, fusionar artículos similares, mejorar el enlazado interno o eliminar páginas sin valor. Priorizar estas tareas según su potencial de retorno garantiza resultados visibles en menos tiempo.</p>"
+}
