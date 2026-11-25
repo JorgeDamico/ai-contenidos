@@ -1,4 +1,5 @@
 import { RenderMode, ServerRoute } from '@angular/ssr';
+import { SERVICIOS_DATA } from './models/servicios.data';
 
 export const serverRoutes: ServerRoute[] = [
   {
@@ -6,8 +7,11 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Prerender
   },
   {
-    path: 'services',
-    renderMode: RenderMode.Prerender
+    path: 'services/:slug',
+    renderMode: RenderMode.Prerender,
+    async getPrerenderParams() {
+      return SERVICIOS_DATA.map(s => ({ slug: s.slug }));
+    }
   },
   {
     path: 'contact',
@@ -24,7 +28,11 @@ export const serverRoutes: ServerRoute[] = [
     async getPrerenderParams() {
       return [
         { slug: 'que-es-seo' },
-        { slug: 'contenido' }
+        { slug: 'contenido' },
+        { slug: 'checklist-antes-de-publicar' },
+        { slug: 'como-hacer-keyword-research' },
+        { slug: 'guia-auditoria-contenidos' },
+        { slug: 'importancia-velocidad-web' }
       ];
     }
   },

@@ -7,7 +7,18 @@ export const routes: Routes = [
     },
     { 
         path: 'services', 
-        loadComponent: () => import('./component/services/services.component').then(m => m.ServicesComponent) 
+        loadComponent: () => import('./component/services/services.component').then(m => m.ServiciosComponent),
+        children: [
+            {
+                path: ':slug',
+                loadComponent: () => import('./component/servicio-detalle/servicio-detalle').then(m => m.ServicioDetalleComponent)
+            },
+            {
+                path: '',
+                redirectTo: 'desarrollo-web-y-sistemas',
+                pathMatch: 'full'
+            }
+        ]
     },
     { 
         path: 'contact', 

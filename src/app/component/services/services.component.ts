@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+/* import { Component } from '@angular/core';
 import { SeoService } from '../../services/seo.service';
 import { RouterLink } from '@angular/router';
 
@@ -25,4 +25,29 @@ export class ServicesComponent {
 
   }
 
+} */
+
+import { Component, ElementRef, viewChild } from '@angular/core';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { SERVICIOS_DATA } from '../../models/servicios.data';
+
+@Component({
+  selector: 'app-servicios',
+  standalone: true,
+  imports: [RouterLink, RouterLinkActive, RouterOutlet],
+  templateUrl: './services.component.html',
+  styleUrl: './services.component.css'
+})
+export class ServiciosComponent {
+  servicios = SERVICIOS_DATA;
+  detalleSection = viewChild<ElementRef>('detalleSection');
+
+  scrollToDetalle() {
+    setTimeout(() => {
+      this.detalleSection()?.nativeElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }, 50);
+  }
 }
