@@ -2,5 +2,6 @@
 
 export const environment = {
   production: false,
-  siteUrl: 'http://localhost:4200'
+  siteUrl: 'http://localhost:4200',
+  appVersion: '1.0.0-dev'
 };

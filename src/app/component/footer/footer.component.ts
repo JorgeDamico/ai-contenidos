@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-footer',
@@ -9,5 +10,5 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink],
 })
 export class FooterComponent {
-
+  appVersion = environment.appVersion;
 }
