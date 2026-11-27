@@ -1,9 +1,24 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-12 col-md-2 bg-light pt-3 border-end">
-      <p class="fw-bold text-uppercase text-muted small px-2 mb-2">Contenidos</p>
+      <details class="d-md-none px-2 mb-3 border rounded-2 bg-white py-2">
+        <summary class="small fw-semibold text-dark text-uppercase" style="cursor: pointer;">
+          Contenidos ({{ postHead.length }})
+        </summary>
 
-      <div class="d-flex flex-column gap-1">
+        <div class="d-flex flex-column gap-1 mt-2">
+          @for (post of postHead; track post.slug) {
+          <a [routerLink]="['/blog/', post.slug]" routerLinkActive="bg-primary bg-opacity-10 text-primary fw-semibold"
+            class="d-flex align-items-center gap-2 px-2 py-1 rounded-2 text-decoration-none text-dark small post-link">
+            <i class="bi bi-file-text text-secondary"></i>
+            <span class="text-truncate" [title]="post.title">{{ post.title }}</span>
+          </a>
+          }
+        </div>
+      </details>
+
+      <!-- En escritorio: lista directa -->
+      <div class="d-none d-md-flex flex-column gap-1">
         @for (post of postHead; track post.slug) {
         <a [routerLink]="['/blog/', post.slug]" routerLinkActive="bg-primary bg-opacity-10 text-primary fw-semibold"
           class="d-flex align-items-center gap-2 px-2 py-1 rounded-2 text-decoration-none text-dark small post-link">
@@ -12,6 +27,7 @@
         </a>
         }
       </div>
+
     </div>
 
     <div class="col-12 col-md-10 d-flex justify-content-center align-items-start pt-4">

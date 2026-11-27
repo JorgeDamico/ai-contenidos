@@ -1,5 +1,5 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideRouter, UrlSerializer, DefaultUrlSerializer, UrlTree, withInMemoryScrolling, withComponentInputBinding } from '@angular/router';
+import { provideRouter, UrlSerializer, DefaultUrlSerializer, UrlTree, withInMemoryScrolling, withComponentInputBinding, withViewTransitions } from '@angular/router';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 
@@ -17,7 +17,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideRouter(
-      routes,
+      routes, withViewTransitions(),
       withComponentInputBinding(), // <-- Habilita @Input() / input() directo desde la URL
       withInMemoryScrolling({
         scrollPositionRestoration: 'enabled', // <-- 'enabled' respeta el historial (atrás/adelante) mejor que 'top'
