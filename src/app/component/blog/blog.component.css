@@ -17,3 +17,13 @@ p {
   color: #0d6efd !important;
   border-color: #0d6efd !important;
 }
+
+.scroll-fade-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 28px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff);
+}

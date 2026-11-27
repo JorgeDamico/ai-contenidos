@@ -1,19 +1,26 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-12 col-md-2 bg-light pt-3 border-end">
-      <details class="d-md-none px-2 mb-3 border rounded-2 bg-white py-2">
+      <details [open]="mobileMenuOpen()" (toggle)="mobileMenuOpen.set($any($event.target).open)"
+        class="d-md-none px-2 mb-3 border rounded-2 bg-white py-2">
         <summary class="small fw-semibold text-dark text-uppercase" style="cursor: pointer;">
           Contenidos ({{ postHead.length }})
         </summary>
 
-        <div class="d-flex flex-column gap-1 mt-2">
-          @for (post of postHead; track post.slug) {
-          <a [routerLink]="['/blog/', post.slug]" routerLinkActive="bg-primary bg-opacity-10 text-primary fw-semibold"
-            class="d-flex align-items-center gap-2 px-2 py-1 rounded-2 text-decoration-none text-dark small post-link">
-            <i class="bi bi-file-text text-secondary"></i>
-            <span class="text-truncate" [title]="post.title">{{ post.title }}</span>
-          </a>
-          }
+        <div class="position-relative mt-2">
+          <div class="d-flex flex-column gap-1 overflow-y-auto pe-1 pb-4" style="max-height: 150px;">
+            @for (post of postHead; track post.slug) {
+            <a [routerLink]="['/blog/', post.slug]" (click)="mobileMenuOpen.set(false)"
+              routerLinkActive="bg-primary bg-opacity-10 text-primary fw-semibold"
+              class="d-flex align-items-center gap-2 px-2 py-1 rounded-2 text-decoration-none text-dark small post-link">
+              <i class="bi bi-file-text text-secondary"></i>
+              <span class="text-truncate" [title]="post.title">{{ post.title }}</span>
+            </a>
+            }
+          </div>
+
+          <!-- Degradado inferior para indicar que continúa la lista -->
+          <div class="scroll-fade-bottom"></div>
         </div>
       </details>
 

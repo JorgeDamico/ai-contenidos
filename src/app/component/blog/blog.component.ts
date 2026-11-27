@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, signal } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { PostService } from '../../services/post.service';
 import { PostHead } from '../../models/post-head';
@@ -14,6 +14,7 @@ export class BlogComponent implements OnInit {
 
   noteSelected: string = 'a';
   postHead: PostHead[] = [];
+  mobileMenuOpen = signal(false);
 
   constructor(
     private postService: PostService,
