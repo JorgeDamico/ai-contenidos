@@ -10,5 +10,29 @@
     "title": "Contenido de calidad",
     "description": "El motor que impulsa el posicionamiento y la conversión.",
     "image": "/images/contenido.webp"
+  },
+  {
+    "slug": "checklist-antes-de-publicar",
+    "title": "Checklist antes de publicar",
+    "description": "Una guía completa para asegurar la calidad de tu contenido antes de lanzarlo.",
+    "image": "/images/checklist-antes-de-publicar.webp"
+  },
+  {
+    "slug": "como-hacer-keyword-research",
+    "title": "Cómo elegir palabras clave que realmente convierten",
+    "description": "Descubre cómo mapear la intención de búsqueda, analizar a tu competencia y crear clusters temáticos para atraer clientes potenciales.",
+    "image": "/images/como-hacer-keyword-research.webp"
+  },
+  {
+    "slug": "guia-auditoria-contenidos",
+    "title": "Pasos clave para auditar el contenido de tu web",
+    "description": "Aprende a evaluar el rendimiento de tus páginas, detectar caídas de tráfico y crear un plan de mejora SEO paso a paso.",
+    "image": "/images/guia-auditoria-contenidos.webp"
+  },
+  {
+    "slug": "importancia-velocidad-web",
+    "title": "Cómo la arquitectura web impacta en tus ventas",
+    "description": "Descubre por qué un diseño rápido, responsivo y bien estructurado mejora tu posicionamiento en Google y multiplica tus conversiones.",
+    "image": "/images/importancia-velocidad-web.webp"
   }
 ]
