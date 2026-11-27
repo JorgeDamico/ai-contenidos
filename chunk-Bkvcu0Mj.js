@@ -1,1 +1,0 @@
-import{P as b,a as A,yt as w_}from"./main-RWD45DPC.js";var i=class t{constructor(o){this.http=o}http;getPost(o){return this.http.get(`posts/${o}.json`)}getAllPosts(){return this.http.get(`posts/posts.json`)}static ɵfac=function(n){return new(n||t)(b(w_))};static ɵprov=A({token:t,factory:t.ɵfac,providedIn:`root`})};export{i as t};
